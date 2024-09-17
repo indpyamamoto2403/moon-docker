@@ -1,43 +1,44 @@
 # プロジェクトセットアップ手順
+このプロジェクトでは、WSL（Windows Subsystem for Linux）とDockerを使用してフロントエンドとバックエンドをセットアップし、MySQLデータベースにアクセスします。以下の手順に従って開発環境をセットアップしてください。
 
-このプロジェクトでは、WSL（Windows Subsystem for Linux）とDockerを使用してフロントエンドとバックエンドをセットアップし、MySQLデータベースにアクセスします。以下の手順に従って、開発環境を構築してください。
-
-## 1. WSLへの接続
-
-まず、WSLに接続します。以下のコマンドをPowerShellまたはコマンドプロンプトで実行してください：
-
-
-## 1. WSLへの接続
-まず、WSL（Windows Subsystem for Linux）に接続してください。以下のコマンドをPowerShellまたはコマンドプロンプトで実行します。
+## 1. WSLに接続する
+まず、WSL（Windows Subsystem for Linux）に接続します。PowerShellまたはコマンドプロンプトで次のコマンドを実行します。
 ```bash
 wsl
+```
 
-## 2. Dockerイメージの取得
-次に、Dockerを使用して moon-docker イメージをプルします。以下のコマンドを実行して、イメージを取得してください。
-
+## 2. Dockerイメージを取得する
+次に、Dockerを使用してmoon-dockerイメージを取得します。以下のコマンドを実行してイメージを取得します。
 ```dockerfile
 docker pull moon-docker
+```
 
-## 3. フロントエンドおよびバックエンドの作成
+## 3. フロントエンドとバックエンドを作成する
 プロジェクトのルートディレクトリに移動し、それぞれのフォルダを作成します。
 
-## 4. Gitリポジトリからソースコードを取得
-各フォルダ内で、Gitリポジトリから最新のソースコードをプルします。
+## 4. Gitリポジトリからソースコードを取得する
+各フォルダ内で、Gitリポジトリから最新のソースコードを取得します。
 
+```bash
 cd front-end
 git pull origin main
-バックエンド
-bash
-コードをコピーする
+```
+
+```bash
 cd back-end
 git pull origin main
-## 5. 開発作業について
-フロントエンド の開発は、front-end ディレクトリ内で行います。
-バックエンド の開発は、back-end ディレクトリ内で行います。
-## 6. MySQLへのアクセス
-MySQLへのアクセスには、mysql コマンドが使えないため、MySQL Workbench を使用してデータベースに接続します。以下の情報を使って接続設定を行ってください。
+```
 
-ホスト名: localhost
-ポート: 3306
-ユーザー名: root
-パスワード: your_password
+## 5. 開発のワークフロー
+フロントエンドの開発はfront-endディレクトリで行います。
+バックエンドの開発はback-endディレクトリで行います。
+
+## 6. MySQLにアクセスする
+MySQLにアクセスするには、mysqlコマンドを使用することはできません。代わりにMySQL Workbenchを使用してデータベースに接続します。以下の情報を使用して接続を設定します。
+
+ホスト：localhost
+ポート：3308(コンテナ側は3306)
+ユーザー名：root
+パスワード：your_password
+
+
