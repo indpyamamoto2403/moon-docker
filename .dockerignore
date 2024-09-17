@@ -1,0 +1,6 @@
+# Exclude node_modules in the frontend project
+app/front-end/my-project/node_modules
+
+node_modules
+*.log
+*.tmp

@@ -1,0 +1,15 @@
+FROM node:18
+
+# 作業ディレクトリを作成
+WORKDIR /app
+
+# アプリケーションのコードをコピー
+COPY ./app/front-end /app
+# 作成したプロジェクトのディレクトリに移動
+WORKDIR /app/my-project
+
+# プロジェクトの依存関係をインストール
+RUN npm install
+
+# コンテナが常に稼働し続けるようにする
+CMD ["npm", "run", "serve"]

@@ -1,0 +1,14 @@
+# app/Dockerfile.python
+FROM python:3.9
+
+# 必要なパッケージをインストールする場合はここに追加
+# RUN pip install ...
+
+# 作業ディレクトリを作成
+WORKDIR /app
+
+# アプリケーションのコードをコピー
+COPY ./app/back-end /app
+
+# コンテナが常に稼働し続けるようにする
+CMD ["tail", "-f", "/dev/null"]
