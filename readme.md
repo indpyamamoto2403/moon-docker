@@ -6,11 +6,16 @@
 ```bash
 wsl
 ```
+## 1.5 Githubからmoon-dockerをプルする
+
+```git
+git clone https://github.com/indpyamamoto2403/moon-docker.git . 
+```
 
 ## 2. Dockerイメージを取得する
 次に、Dockerを使用してmoon-dockerイメージを取得します。以下のコマンドを実行してイメージを取得します。
 ```dockerfile
-docker pull moon-docker
+docker-compose up --build
 ```
 
 ## 3. フロントエンドとバックエンドを作成する
